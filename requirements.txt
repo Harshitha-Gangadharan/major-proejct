@@ -2,44 +2,6 @@ Django>=4.2
 psycopg2-binary>=2.9
 gunicorn>=20.1
 dj-database-url>=1.0
-python-dotenv>=1.0absl-py==2.1.0
-astor==0.8.1
-cycler==0.11.0
-Django==2.1.7
-gast==0.6.0
-google-pasta==0.2.0
-grpcio==1.62.3
-h5py==2.10.0
-importlib-metadata==6.7.0
-joblib==1.3.2
-Keras==2.3.1
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.2
-Kiwisolver==1.4.5
-Markdown==3.4.4
-MarkupSafe==2.1.5
-matplotlib==3.1.1
-numpy==1.19.2
-opencv-contrib-python==4.3.0.36
-opencv-python==4.1.1.26
-pandas==0.25.3
-protobuf==3.16.0
-psycopg2-binary
-pyparsing==3.1.4
-python-dateutil==2.9.0.post0
-pytz==2025.2
-PyYAML==6.0.1
-scikit-learn==0.22.2.post1
-scipy==1.7.3
-seaborn==0.10.1
-six==1.17.0
-tensorboard==1.14.0
-tensorflow==1.14.0
-tensorflow-estimator==1.14.0
-termcolor==2.3.0
-typing-extensions==4.7.1
-Werkzeug==2.2.3
-gunicorn
 Django==2.1.7
 psycopg2-binary>=2.8
 dj-database-url>=1.0
@@ -47,40 +9,40 @@ gunicorn>=20.1
 whitenoise>=5.2
 python-dotenv>=0.21.0
 
-# Project-specific / optional ML dependencies (keep if you need them locally)
-astor==0.8.1
-cycler==0.11.0
-gast==0.6.0
-google-pasta==0.2.0
-grpcio==1.62.3
-h5py==2.10.0
-importlib-metadata==6.7.0
-joblib==1.3.2
-Keras==2.3.1
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.2
-Kiwisolver==1.4.5
-Markdown==3.4.4
-MarkupSafe==2.1.5
-matplotlib==3.1.1
-numpy==1.19.2
-opencv-contrib-python==4.3.0.36
-opencv-python==4.1.1.26
-pandas==0.25.3
-protobuf==3.16.0
-pyparsing==3.1.4
-python-dateutil==2.9.0.post0
-pytz==2025.2
-PyYAML==6.0.1
-scikit-learn==0.22.2.post1
-scipy==1.7.3
-seaborn==0.10.1
-six==1.17.0
-tensorboard==1.14.0
-tensorflow==1.14.0
-tensorflow-estimator==1.14.0
-termcolor==2.3.0
-typing-extensions==4.7.1
-Werkzeug==2.2.3
+# Optional / development-only ML dependencies (commented out to speed deploy)
+# astor==0.8.1
+# cycler==0.11.0
+# gast==0.6.0
+# google-pasta==0.2.0
+# grpcio==1.62.3
+# h5py==2.10.0
+# importlib-metadata==6.7.0
+# joblib==1.3.2
+# Keras==2.3.1
+# Keras-Applications==1.0.8
+# Keras-Preprocessing==1.1.2
+# Kiwisolver==1.4.5
+# Markdown==3.4.4
+# MarkupSafe==2.1.5
+# matplotlib==3.1.1
+# numpy==1.19.2
+# opencv-contrib-python==4.3.0.36
+# opencv-python==4.1.1.26
+# pandas==0.25.3
+# protobuf==3.16.0
+# pyparsing==3.1.4
+# python-dateutil==2.9.0.post0
+# pytz==2025.2
+# PyYAML==6.0.1
+# scikit-learn==0.22.2.post1
+# scipy==1.7.3
+# seaborn==0.10.1
+# six==1.17.0
+# tensorboard==1.14.0
+# tensorflow==1.14.0
+# tensorflow-estimator==1.14.0
+# termcolor==2.3.0
+# typing-extensions==4.7.1
+# Werkzeug==2.2.3
 
 # End of requirements
