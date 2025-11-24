@@ -1,13 +1,13 @@
-# Pin Django to the project's original version to avoid conflicts
-Django==2.1.7
+# Upgrade to a modern, supported Django and compatible libraries
+Django==4.2.26
 
 # Required deployment/runtime packages
-psycopg2-binary>=2.8
-# Use a dj-database-url version compatible with Django 2.1
-dj-database-url==0.5.0
+psycopg2-binary>=2.9
+# dj-database-url to parse DATABASE_URL
+dj-database-url>=1.0.0
 gunicorn>=20.1
-whitenoise>=4.1.4
-python-dotenv>=0.21.0
+whitenoise>=6.0
+python-dotenv>=1.0.0
 
 # Optional / development-only ML dependencies (commented out to speed deploy)
 # astor==0.8.1

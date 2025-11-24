@@ -11,15 +11,14 @@ services:
       - key: WSGI_MODULE
         value: Cloud.wsgi
       - key: DEBUG
-        value: 'False'
+        value: "False"
       - key: ALLOWED_HOSTS
-        value: '.onrender.com'
+        value: ".onrender.com"
 
 databases:
   - name: cloudhealthcare-db
     engine: postgres
     plan: starter
-
 # Note: This `render.yaml` is a starting point. When you create the service
 # via Render's dashboard or CLI, Render will provision the Postgres database
 # and expose a `DATABASE_URL` environment variable; you should not hardcode

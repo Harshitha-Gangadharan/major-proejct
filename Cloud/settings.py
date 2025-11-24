@@ -82,14 +82,26 @@ WSGI_APPLICATION = 'Cloud.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 # Use dj-database-url to configure the database from DATABASE_URL environment variable.
-# Example DATABASE_URL: postgres://user:password@host:port/dbname
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL', 'postgres://postgres:postgres@127.0.0.1:5432/CloudHealth'),
-        conn_max_age=600,
-        ssl_require=not (os.environ.get('DISABLE_DB_SSL', '') == 'True')
-    )
-}
+# Example DATABASE_URL (production): postgres://user:password@host:port/dbname
+# If DATABASE_URL is not set (local development), fall back to a local SQLite file
+# so you can run `manage.py migrate` without a local Postgres instance.
+DATABASE_URL = os.environ.get('DATABASE_URL')
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=DATABASE_URL,
+            conn_max_age=600,
+            ssl_require=not (os.environ.get('DISABLE_DB_SSL', '') == 'True'),
+        )
+    }
+else:
+    # Local development fallback
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
@@ -136,3 +148,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Optionally additional static dirs if you keep an app-level static
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'CloudApp', 'static')]
+
+# Django 3.2+: specify default primary key field type for new models
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
